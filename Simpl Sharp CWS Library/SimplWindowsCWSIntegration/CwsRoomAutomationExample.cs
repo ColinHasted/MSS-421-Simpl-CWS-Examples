@@ -395,7 +395,6 @@ namespace SimplWindowsCWSIntegration
                 VC4Debugger.Debug("User Host Address: {0}", args.Context.Request.UserHostAddress);
                 VC4Debugger.Debug("User Hostname: {0}", args.Context.Request.UserHostName);
                 VC4Debugger.Debug("User Agent: {0}", args.Context.Request.UserAgent);
-                VC4Debugger.Debug("User Languages: {0}", string.Join(",", args.Context.Request.UserLanguages));
             }
             catch (Exception ex)
             {
