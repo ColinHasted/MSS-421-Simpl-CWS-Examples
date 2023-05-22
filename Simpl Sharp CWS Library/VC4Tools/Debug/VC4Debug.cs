@@ -66,7 +66,7 @@ namespace VC4Tools
 
         public static void Exception(string message, params object[] parameters) => OnErrorMessage(Severity.Exception, message, parameters);
 
-        public static void Exception(string message, Exception ex) => OnErrorMessage(Severity.Exception, string.Format("{0} ~ {1}", message, ex.Message);
+        public static void Exception(string message, Exception ex) => OnErrorMessage(Severity.Exception, string.Format("{0} ~ {1}", message, ex.Message));
 
         public static void Exception(Exception ex) => OnErrorMessage(Severity.Exception, ex.Message);
         public static void Exception(string message) => OnErrorMessage(Severity.Exception, message);
