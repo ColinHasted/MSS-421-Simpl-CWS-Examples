@@ -6,7 +6,7 @@ namespace VC4Tools
 {
     public static class VC4Debugger
     {
-        private static readonly Dictionary<string,List<Action<string>>> commands=new Dictionary<string,List<Action<string>>>();
+        private static readonly Dictionary<string, List<Action<string>>> commands = new Dictionary<string, List<Action<string>>>();
 
         #region Event Handlers
         /// <summary>
@@ -65,6 +65,8 @@ namespace VC4Tools
         public static void Error(string message) => OnErrorMessage(Severity.Error, message);
 
         public static void Exception(string message, params object[] parameters) => OnErrorMessage(Severity.Exception, message, parameters);
+
+        public static void Exception(string message, Exception ex) => OnErrorMessage(Severity.Exception, string.Format("{0} ~ {1}", message, ex.Message);
 
         public static void Exception(Exception ex) => OnErrorMessage(Severity.Exception, ex.Message);
         public static void Exception(string message) => OnErrorMessage(Severity.Exception, message);
